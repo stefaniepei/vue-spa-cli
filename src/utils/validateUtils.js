@@ -1,3 +1,4 @@
+/* eslint-disable */
 // 包含普通检查工具，验证工具和正则验证处理工具
 const ValidateUtils = {
   isEmpty(_o) {
@@ -37,9 +38,8 @@ const ValidateUtils = {
       )
     ) {
       return true;
-    } else {
-      return false;
     }
+    return false;
   },
   getBrowserInfo() {
     //获取浏览器版本号信息
@@ -65,6 +65,7 @@ const ValidateUtils = {
     if (agent.indexOf("chrome") > 0) {
       return agent.match(regStr_chrome)[0];
     }
+    return null;
   },
   getPlaformInfo() {
     return `language:${navigator.language}|os:${

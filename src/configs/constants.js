@@ -7,3 +7,6 @@ export const CLIENT_CODE = 422;
 export const SERVER_ERROR_CODE = 500;
 export const GATEWAY_CODE = 504;
 export const TIME_OUT = 1000000; // 超时
+
+// store里面的公共设置值
+export const SET_STATE = "global/setState";

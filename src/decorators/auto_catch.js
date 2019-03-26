@@ -1,10 +1,13 @@
+import _debug from "debug";
+const debug = _debug("app:AutoCatch");
+
 const defaultCatchType = "log";
 
 const dynamicCatchType = "dynamic_catch";
 
 const errorCatch = {
   error: err => console.error(err),
-  log: err => console.log(err),
+  log: err => debug(err),
   slient: () => {}
 };
 

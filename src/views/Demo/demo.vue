@@ -13,7 +13,7 @@
       </li>
       <li class="item">
         <div class="desc">
-          <h3>@Decorators.Debounce()</h3>
+          <h3>@Decorators.Debounce() {{ test }}</h3>
           <p>在一段时间内，函数只会被调用一次。</p>
         </div>
         <button @click="debounce">debounce</button>
@@ -78,61 +78,7 @@
   </div>
 </template>
 
-<script>
-import Decorators from "../decorators/index.js";
-
-export default {
-  name: "demo",
-
-  @Decorators.Shortcuts({
-    notChangeValue: 1
-  })
-  data: () => ({}),
-
-  methods: {
-    @Decorators.AutoCatch()
-    async request() {
-      await fetch();
-    },
-
-    @Decorators.Debounce(800)
-    debounce() {
-      console.log("debounce");
-    },
-
-    @Decorators.Throttle(1000)
-    throttle() {
-      console.log("throttle");
-    },
-
-    @Decorators.Delay(500)
-    delay() {
-      console.log("delay");
-    },
-
-    @Decorators.Time()
-    time() {
-      const texts = new Array(200).fill("hello").map(v => `${v} world`);
-      console.log(texts);
-    },
-
-    @Decorators.Deprecated()
-    deprecatedTestFunc() {},
-
-    @Decorators.NextTick()
-    nextTick() {},
-
-    add() {
-      this.notChangeValue = this.notChangeValue + 1;
-    },
-
-    refresh() {
-      this.$forceUpdate();
-    }
-  }
-};
-</script>
-
+<script src="./demo.js"></script>
 <style scoped>
 .list {
   width: 600px;

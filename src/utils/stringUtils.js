@@ -1,3 +1,4 @@
+/* eslint-disable */
 const StringUtils = {
   /**
    * 返回中英文字符串长度

@@ -1,3 +1,4 @@
+/* eslint-disable */
 const DateUtils = {
   /**
    * element-ui 日期选择框-开始日期选择框的禁用日期
@@ -17,17 +18,16 @@ const DateUtils = {
   disableElDatePickerEndTime(_time, _startDate, _days = 90) {
     if (!_startDate) {
       return true;
-    } else {
-      const curDate = new Date(_startDate).getTime();
-      // 这里算出一个月的毫秒数,这里使用30的平均值
-      const nextAnyMonths = curDate + 24 * 3600 * 1000 * _days;
-      const lastAnyMonths = curDate - 24 * 3600 * 1000 * 1;
-      return (
-        _time.getTime() > nextAnyMonths ||
-        _time.getTime() < lastAnyMonths ||
-        _time.getTime() > Date.now()
-      );
     }
+    const curDate = new Date(_startDate).getTime();
+    // 这里算出一个月的毫秒数,这里使用30的平均值
+    const nextAnyMonths = curDate + 24 * 3600 * 1000 * _days;
+    const lastAnyMonths = curDate - 24 * 3600 * 1000 * 1;
+    return (
+      _time.getTime() > nextAnyMonths ||
+      _time.getTime() < lastAnyMonths ||
+      _time.getTime() > Date.now()
+    );
   },
   /**
    * 时间转成时间戳用来比较大小

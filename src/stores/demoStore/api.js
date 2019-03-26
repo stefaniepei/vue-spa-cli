@@ -1,14 +1,15 @@
-import axios from "../../configs/axios";
+import HttpService from "../../services/httpService";
+import AutoCatch from "../../decorators/auto_catch";
 
-//获取验证码
-export function sendTest() {
-  return axios.get(`/user/code/sendCode`, {
-    params: {
-      fresh: new Date().getTime()
-    }
-  });
-}
-// 用户登录
-export function sendTest2(params) {
-  return axios.post(`/user/login`, params);
-}
+export const Api = {
+  //获取验证码
+  @AutoCatch()
+  sendTest() {
+    return HttpService.get("/sendTest", { time: new Date().getTime() });
+  },
+  // 用户登录
+  @AutoCatch()
+  sendTest2(params) {
+    return HttpService.post("/sendTest2", params);
+  }
+};

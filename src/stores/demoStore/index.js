@@ -1,5 +1,6 @@
-import * as types from "./type";
-import * as api from "./api";
+import * as ActionTypes from "./type";
+import { Api } from "./api";
+import { SUCCESS_CODE, SET_STATE } from "../../configs/constants";
 
 export default {
   state: {
@@ -7,7 +8,7 @@ export default {
     test2: ""
   },
   mutations: {
-    [types.SET_STATE](state, obj) {
+    setState(state, obj) {
       state[obj.key] = obj.val;
     },
     toggle(state, key) {
@@ -19,19 +20,25 @@ export default {
     }
   },
   actions: {
-    async [types.SEND_TEST]({ commit }, params) {
-      let res = await api.sendTest(params);
-      if (res && res.code === 200) {
-        commit(types.SET_STATE, {
+    [SET_STATE]({ commit }, params) {
+      commit("setState", {
+        key: params.key,
+        val: params.val
+      });
+    },
+    async [ActionTypes.SEND_TEST]({ commit }, params) {
+      let res = await Api.sendTest(params);
+      if (res && res.code === SUCCESS_CODE) {
+        commit("setState", {
           key: "test",
           val: res.data
         });
       }
     },
-    async [types.SEND_TEST2]({ commit }, params) {
-      let res = await api.sendTest2(params);
-      if (res && res.code === 200) {
-        commit(types.SET_STATE, {
+    async [ActionTypes.SEND_TEST2]({ commit }, params) {
+      let res = await Api.sendTest2(params);
+      if (res && res.code === SUCCESS_CODE) {
+        commit("setState", {
           key: "test2",
           val: res.data
         });

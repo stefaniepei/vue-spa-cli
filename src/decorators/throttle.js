@@ -1,3 +1,4 @@
+/* eslint-disable */
 export default (wait = 300) => (target, key, descriptor) => {
   const _copy = descriptor.value;
   let timeout;
