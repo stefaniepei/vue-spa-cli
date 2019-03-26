@@ -19,19 +19,23 @@ const ValidateUtils = {
     return false;
   },
   isString(_o) {
-    return Object.prototype.toString.call(_o) === '[object String]';
+    return Object.prototype.toString.call(_o) === "[object String]";
   },
   isArray(_o) {
-    return Object.prototype.toString.call(_o) == '[object Array]';
+    return Object.prototype.toString.call(_o) == "[object Array]";
   },
   isObj(_o) {
-    return Object.prototype.toString.call(_o) == '[object Object]';
+    return Object.prototype.toString.call(_o) == "[object Object]";
   },
   isObject(_o) {
-    return Object.prototype.toString.call(_o) === '[object Object]';
+    return Object.prototype.toString.call(_o) === "[object Object]";
   },
   isMobile() {
-    if (window.navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)) {
+    if (
+      window.navigator.userAgent.match(
+        /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
+      )
+    ) {
       return true;
     } else {
       return false;
@@ -40,39 +44,40 @@ const ValidateUtils = {
   getBrowserInfo() {
     //获取浏览器版本号信息
     let agent = navigator.userAgent.toLowerCase();
-    let regStr_ie = /msie [\d.]+;/ig;
-    let regStr_ff = /firefox\/[\d.]+/ig;
-    let regStr_chrome = /chrome\/[\d.]+/ig;
-    let regStr_saf = /safari\/[\d.]+/ig;
+    let regStr_ie = /msie [\d.]+;/gi;
+    let regStr_ff = /firefox\/[\d.]+/gi;
+    let regStr_chrome = /chrome\/[\d.]+/gi;
+    let regStr_saf = /safari\/[\d.]+/gi;
 
     //IE
-    if (agent.indexOf('msie') > 0) {
+    if (agent.indexOf("msie") > 0) {
       return agent.match(regStr_ie)[0];
     }
     //firefox
-    if (agent.indexOf('firefox') > 0) {
+    if (agent.indexOf("firefox") > 0) {
       return agent.match(regStr_ff)[0];
     }
     //Safari
-    if (agent.indexOf('safari') > 0 && agent.indexOf('chrome') < 0) {
+    if (agent.indexOf("safari") > 0 && agent.indexOf("chrome") < 0) {
       return agent.match(regStr_saf)[0];
     }
     //Chrome
-    if (agent.indexOf('chrome') > 0) {
+    if (agent.indexOf("chrome") > 0) {
       return agent.match(regStr_chrome)[0];
     }
   },
   getPlaformInfo() {
-    return `language:${navigator.language}|os:${navigator.platform}|useragent:${this.getBrowserInfo()}|`;
-  },
-  
-}
-export default ValidateUtils
+    return `language:${navigator.language}|os:${
+      navigator.platform
+    }|useragent:${this.getBrowserInfo()}|`;
+  }
+};
+export default ValidateUtils;
 
 // 常用正则
 //匹配特殊字符 注意 1 和 2 配合使用 逻辑 用 1'或"2=>true
-export const testSpecialChar1 = /[`~!@#$%^&*()_+<>?:"{},.\/;'[\]]/im;
-export const testSpecialChar2 = /[·！#￥（——）：；“”‘、，|《。》？、【】[\]]/im;
+export const testSpecialChar1 = /[`~!@#$%^&*()_+<>?:"{},.\/;'[\]]/im; // eslint-disable-line
+export const testSpecialChar2 = /[·！#￥（——）：；“”‘、，|《。》？、【】[\]]/im; // eslint-disable-line
 //匹配帐号是否合法(字母开头，允许5-10字节，允许字母数字下划线)
 export const testUsername = /^[a-zA-Z][a-zA-Z0-9_]{4,9}$/;
 //至少8-16个字符，至少1个大写字母，1个小写字母和1个数字，其他可以是任意字符：
@@ -91,7 +96,7 @@ export const testDecimalEightNums = /^\d+(\.\d{0,8})?$/; //8位小数
 //email地址
 export const testEmail = /^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/;
 //url地址
-export const testUrl = /^http:\/\/[A-Za-z0-9]+\.[A-Za-z0-9]+[\/=\?%\-&_~`@[\]\':+!]*([^<>\"\"])*$/;
+export const testUrl = /^http:\/\/[A-Za-z0-9]+\.[A-Za-z0-9]+[\/=\?%\-&_~`@[\]\':+!]*([^<>\"\"])*$/; // eslint-disable-line
 //年/月/日（年-月-日、年.月.日）
 export const testYmd = /^(19|20)\d\d[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])$/;
 //匹配中文字符

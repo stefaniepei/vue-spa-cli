@@ -1,4 +1,2 @@
-const ObjectUtils = {
-  
-}
-export default ObjectUtils
+const ObjectUtils = {};
+export default ObjectUtils;

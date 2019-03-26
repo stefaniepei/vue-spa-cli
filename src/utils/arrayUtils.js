@@ -4,10 +4,8 @@ const ArrayUtils = {
    * @param _arr 数组
    * @returns 新数组
    */
-  deepClone(_arr){
-    return JSON.parse(JSON.stringify(_arr))
-  },
- 
-
-}
-export default ArrayUtils
+  deepClone(_arr) {
+    return JSON.parse(JSON.stringify(_arr));
+  }
+};
+export default ArrayUtils;

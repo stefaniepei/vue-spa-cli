@@ -2,11 +2,10 @@
 import axios from 'axios';
 import _debug from 'debug';
 import Env from './env'
-import { SUCCESS_CODE, TIME_OUT } from '../constants/common'
+import { SUCCESS_CODE, TIME_OUT } from './constants'
 
 const debug = _debug('app:Api');
-
-export const BaseURL = Env.HTTP_API;
+const BaseURL = Env.HTTP_API;
 
 axios.defaults.timeout = TIME_OUT;
 
