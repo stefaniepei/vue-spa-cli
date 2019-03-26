@@ -1,3 +1,4 @@
+// 统计当前函数的执行时间
 export default customConsole => (target, name, descriptor) => {
   const _copy = descriptor.value;
   const hasCustom =

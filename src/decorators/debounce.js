@@ -1,3 +1,4 @@
+// 在一段时间内，函数只会被调用一次。
 export default (time = null) => (target, name, descriptor) => {
   const _copy = descriptor.value;
   let debouncePass = true,

@@ -11,6 +11,9 @@ import Throttle from "../../decorators/throttle";
 import * as ActionTypes from "../../stores/demoStore/type";
 import { SET_STATE } from "../../configs/constants";
 
+import _debug from "debug";
+const debug = _debug("app:Views:Demo");
+
 export default {
   name: "demo",
   @Shortcuts({
@@ -31,26 +34,25 @@ export default {
 
     @Debounce(800)
     debounce() {
-      console.log("debounce");
+      debug("debounce", this.test);
       this.$store.dispatch(SET_STATE,{key:'test',val:'4'})
     },
 
     @Throttle(1000)
     throttle() {
-      console.log("throttle", this.test);
-      
+      debug("throttle", this.test);
       this.$store.dispatch(SET_STATE,{key:'test',val:'3'})
     },
 
     @Delay(500)
     delay() {
-      console.log("delay");
+      debug("delay");
     },
 
     @Time()
     time() {
       const texts = new Array(200).fill("hello").map(v => `${v} world`);
-      console.log(texts);
+      debug(texts);
     },
 
     @Deprecated()
