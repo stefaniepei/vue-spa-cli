@@ -34,19 +34,20 @@ export default {
 
     @Debounce(800)
     debounce() {
-      debug("debounce", this.test);
-      this.$store.dispatch(SET_STATE,{key:'test',val:'4'})
+      debug(this.test);
+      this.$store.dispatch(SET_STATE,{key:'test',val:'debounce'})
     },
 
     @Throttle(1000)
     throttle() {
-      debug("throttle", this.test);
-      this.$store.dispatch(SET_STATE,{key:'test',val:'3'})
+      debug(this.test);
+      this.$store.dispatch(SET_STATE,{key:'test',val:'throttle'})
     },
 
     @Delay(500)
     delay() {
-      debug("delay");
+      debug(this.test);
+      this.$store.dispatch(SET_STATE,{key:'test',val:'delay'})
     },
 
     @Time()
