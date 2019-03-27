@@ -1,6 +1,6 @@
 import * as ActionTypes from "./type";
 import { Api } from "./api";
-import { SUCCESS_CODE, SET_STATE } from "../../configs/constants";
+import { SUCCESS_CODE, SET_STATE } from "configs/constants";
 
 export default {
   state: {

@@ -1,4 +1,4 @@
-import axios from "../configs/axios";
+import axios from "configs/axios";
 import StorageService from "./storageService";
 
 const HttpService = {

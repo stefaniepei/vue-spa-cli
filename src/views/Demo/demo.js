@@ -1,15 +1,15 @@
 /* eslint-disable */
-import AutoCatch from "../../decorators/auto_catch";
-import Shortcuts from "../../decorators/shortcuts";
-import Delay from "../../decorators/delay";
-import Time from "../../decorators/time";
-import Debounce from "../../decorators/debounce";
-import Deprecated from "../../decorators/deprecated";
-import NextTick from "../../decorators/next_tick";
-import Throttle from "../../decorators/throttle";
+import AutoCatch from "decorators/auto_catch";
+import Shortcuts from "decorators/shortcuts";
+import Delay from "decorators/delay";
+import Time from "decorators/time";
+import Debounce from "decorators/debounce";
+import Deprecated from "decorators/deprecated";
+import NextTick from "decorators/next_tick";
+import Throttle from "decorators/throttle";
 
-import * as ActionTypes from "../../stores/demoStore/type";
-import { SET_STATE } from "../../configs/constants";
+import * as ActionTypes from "stores/demoStore/type";
+import { SET_STATE } from "configs/constants";
 
 import _debug from "debug";
 const debug = _debug("app:Views:Demo");
