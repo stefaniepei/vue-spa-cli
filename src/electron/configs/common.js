@@ -3,14 +3,14 @@
 export default class Common {
   static get url() {
     return {
-      home: "https://www.runxsports.com",
-      archives: "https://www.runxsports.com/archives",
-      topics: "https://www.runxsports.com/topics",
-      tags: "https://www.runxsports.com/tags",
-      about: "https://www.runxsports.com/about",
-      thanks: "https://www.runxsports.com/thanks",
-      mail: "mailto:hi[at]runxsports.com",
-      release: "https://github.com/runxsports/runxsports-blog-clients/releases"
+      home: "https://www.electron",
+      archives: "https://www.electron/archives",
+      topics: "https://www.electron/topics",
+      tags: "https://www.electron/tags",
+      about: "https://www.electron/about",
+      thanks: "https://www.electron/thanks",
+      mail: "mailto:hi[at]electron",
+      release: "https://github.com/electron/releases"
     };
   }
 

@@ -1,23 +1,23 @@
 <template>
-  <section class="runx_chatBubble" :class="mode">
+  <section class="app_chatBubble" :class="mode">
     <span>{{ mode }} Chat</span>
   </section>
 </template>
 <script lang="js" src="./chatBubble.js"></script>
 <style lang="scss" scoped>
-.runx_chatBubble.window {
+.app_chatBubble.window {
   span {
     font-size: 20px;
     color: #666;
   }
 }
-.runx_chatBubble.pc {
+.app_chatBubble.pc {
   span {
     font-size: 18px;
     color: #333;
   }
 }
-.runx_chatBubble.mobile {
+.app_chatBubble.mobile {
   span {
     font-size: 16px;
     color: rgb(153, 153, 153);

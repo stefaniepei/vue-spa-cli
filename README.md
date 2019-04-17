@@ -1,5 +1,5 @@
-# oa-front-pc
-oa-front-pc 桌面electron端+web端(pc+mobile)
+# vue-spa-cli
+vue-spa-cli electron分支 桌面electron端+web端(pc+mobile)
 
 ## 开发规范 为保证结构统一
 
@@ -90,7 +90,7 @@ npm run build:xxx:web // web端xxx环境打包
 5. render端读取图片 const content = require('fs').readFileSync('/path/to/file'); 【require前加 remote 待测试】
 6. 为保证多窗口的vuex通讯，故使用vuex-electron，但store里面的各模块state请保证命名唯一
 7. 调试 xxBroswerWindow.webContents.openDevTools();
-8. 日志记录 // 服务器写日志用 可能地址：C:\Users\Admin\AppData\Roaming\oa-front-pc\log.log
+8. 日志记录 // 服务器写日志用 可能地址：C:\Users\Admin\AppData\Roaming\vue-spa-cli\log.log
               import log from "electron-log";
               log.error("error");
               log.warn("warn");

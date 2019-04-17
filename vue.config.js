@@ -26,7 +26,7 @@ module.exports = {
     config.plugin('define').tap(([options={}])=>[{
       ...options,
       VERSION: JSON.stringify('1.0.0'),
-      APPNAME: JSON.stringify('oa-front-pc')
+      APPNAME: JSON.stringify('vue-spa-cli')
     }])
   },
   pluginOptions: {

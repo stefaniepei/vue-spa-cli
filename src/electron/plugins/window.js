@@ -11,7 +11,7 @@ let mainWindow;
 let otherWindow;
 let createdAppProtocol = false; // 是否已经创建协议
 
-// 服务器写日志用 可能地址：C:\Users\Admin\AppData\Roaming\oa-front-pc\log.log
+// 服务器写日志用 可能地址：C:\Users\Admin\AppData\Roaming\vue-spa-cli\log.log
 import log from "electron-log";
 log.warn("----------------------------------------------------------");
 log.warn("NODE_ENV：", process.env.NODE_ENV);
@@ -108,13 +108,13 @@ export function createMainWindow() {
   mainWindow.webContents.on("will-navigate", (event, url) => {
     event.preventDefault();
     if (url.match("login-callback")) mainWindow.loadURL(Common.url.home);
-    else if (!url.match("runxsports")) shell.openExternal(url);
+    else if (!url.match("app")) shell.openExternal(url);
     else mainWindow.loadURL(url);
   });
   mainWindow.webContents.on("new-window", (event, url) => {
     event.preventDefault();
     if (url.match("login-callback")) mainWindow.loadURL(Common.url.home);
-    else if (!url.match("runxsports")) shell.openExternal(url);
+    else if (!url.match("app")) shell.openExternal(url);
     else mainWindow.loadURL(url);
   });
 

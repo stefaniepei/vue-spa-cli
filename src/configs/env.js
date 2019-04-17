@@ -3,14 +3,14 @@ const mode = process.env.VUE_APP_MODE || "web";
 // api host
 const apiHost = {
   production: "http://api.prod.com",
-  test: "http://test-im-gateway.runx.vip",
-  development: "http://dev-im-gateway.runx.vip"
+  test: "http://api.test.com",
+  development: "http://api.dev.com"
 };
 
 const wsHost = {
   production: "ws://api.prod.com",
-  test: "ws://test-im-gateway.runx.vip",
-  development: "ws://dev-im-gateway.runx.vip"
+  test: "ws://api.test.vip",
+  development: "ws://api.dev.vip"
 };
 
 class Env {

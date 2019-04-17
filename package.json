@@ -1,8 +1,8 @@
 {
-  "name": "oa-front-pc",
+  "name": "vue-spa-cli",
   "version": "0.1.0",
-  "author": "runxsports.com",
-  "description": "oa-front-pc by electron and vue",
+  "author": "stefaniepei",
+  "description": "vue-spa-cli by electron and vue",
   "private": true,
   "scripts": {
     "dev": "vue-cli-service electron:serve --mode windowDev",
