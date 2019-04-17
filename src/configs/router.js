@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Env from "@/configs/env";
+import ValidateUtils from "@/utils/validateUtils";
 Vue.use(Router);
 
 /**
@@ -49,5 +49,5 @@ const pcRoutes = [
   }
 ];
 export default new Router({
-  routes: Env.DEFAULT.MODE === "mobile" ? mobileRoutes : pcRoutes
+  routes: ValidateUtils.isMobile() ? mobileRoutes : pcRoutes
 });

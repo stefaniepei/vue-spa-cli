@@ -1,5 +1,4 @@
 const env = process.env.VUE_APP_ENV || "development";
-const mode = process.env.VUE_APP_MODE || "pc";
 // api host
 const apiHost = {
   production: "http://api.prod.com",
@@ -17,7 +16,6 @@ class Env {
   static get DEFAULT() {
     return {
       ENV: env,
-      MODE: mode,
       HTTP_API: apiHost[env],
       WS_API: wsHost[env]
     };

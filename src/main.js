@@ -16,5 +16,5 @@ Object.keys(filters).forEach(key => Vue.filter(key, filters[key])); //install fi
 new Vue({
   router,
   store,
-  render: h => h(ValidateUtils.isMobile ? MobileApp : PcApp)
+  render: h => h(ValidateUtils.isMobile() ? MobileApp : PcApp)
 }).$mount("#app");

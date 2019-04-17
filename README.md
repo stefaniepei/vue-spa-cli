@@ -11,7 +11,6 @@ vue 脚手架 by vue-cli3
 - :services：http服务,websocket服务(socket.io,sockjs-client),本地存储或cookie存储服务
 - :stores：vuex状态管理-状态类型,状态管理,接口请求
 - :utils：工具-数组处理工具,日期处理工具,数字处理工具,对象处理工具,字符串处理工具,检查/验证工具(不够可再加lodash/ramda)
-- :views：页面-vue页面+js页面+常量
 - :pc：pc端页面+js页面+常量
 - :mobile：h5端页面+js页面+常量
 
