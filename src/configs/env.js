@@ -1,21 +1,23 @@
-const env = process.env.NODE_ENV || "development";
+const env = process.env.VUE_APP_ENV || "development";
+const mode = process.env.VUE_APP_MODE || "pc";
 // api host
 const apiHost = {
-  production: "https://api.prod.com",
-  test: "https://api.test.com",
-  development: "https://api.dev.com"
+  production: "http://api.prod.com",
+  test: "http://test-im-gateway.runx.vip",
+  development: "http://dev-im-gateway.runx.vip"
 };
 
 const wsHost = {
   production: "ws://api.prod.com",
-  test: "ws://api.test.com",
-  development: "ws://api.dev.com"
+  test: "ws://test-im-gateway.runx.vip",
+  development: "ws://dev-im-gateway.runx.vip"
 };
 
 class Env {
   static get DEFAULT() {
     return {
       ENV: env,
+      MODE: mode,
       HTTP_API: apiHost[env],
       WS_API: wsHost[env]
     };

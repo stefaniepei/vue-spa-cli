@@ -1,5 +1,8 @@
 <template>
-  <div>
+  <div class="demo">
+    <router-link to="/">Home</router-link> |
+    <router-link to="/demo">Demo by Decorators</router-link> |
+    <router-link to="/image">image</router-link>
     <ul class="list">
       <li class="item">
         <div class="desc">
@@ -79,31 +82,33 @@
 </template>
 
 <script src="./demo.js"></script>
-<style scoped>
-.list {
-  width: 600px;
-  margin: 140px auto 0;
-}
+<style scoped lang="scss">
+.demo {
+  .list {
+    width: 600px;
+    margin: 140px auto 0;
+  }
 
-button {
-  max-height: 46px;
-  margin: 0 5px;
-}
+  button {
+    max-height: 46px;
+    margin: 0 5px;
+  }
 
-.item {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  background: #f5f3f3;
-  padding: 10px;
-  margin-bottom: 20px;
-}
+  .item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: #f5f3f3;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
 
-.desc {
-  display: flex;
-  max-width: 50%;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
+  .desc {
+    display: flex;
+    max-width: 50%;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
 }
 </style>

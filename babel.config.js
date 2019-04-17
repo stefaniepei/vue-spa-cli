@@ -7,5 +7,14 @@ module.exports = {
         decoratorsLegacy: true
       }
     ]
+  ],
+  plugins: [
+    [
+      "component",
+      {
+        libraryName: "element-ui",
+        styleLibraryName: "theme-chalk"
+      }
+    ]
   ]
 };

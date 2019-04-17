@@ -1,5 +1,5 @@
-import HttpService from "services/httpService";
-import AutoCatch from "decorators/auto_catch";
+import HttpService from "@/services/httpService";
+import AutoCatch from "@/decorators/auto_catch";
 
 export const Api = {
   //获取验证码

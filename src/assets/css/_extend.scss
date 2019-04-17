@@ -1,0 +1,18 @@
+// 统一scss之继承@extend 推荐使用
+// 如果你的代码块不需要专任何变量参数，而且有一个基类已在文件中存在，那么建议使用 继承。
+// 特点：不可传参。
+// 不足：如果是类(.class)，不管有没有调用(@extend)，在编译的时候，都会生成对应的CSS。
+// 用法：继承 @extend .ellipsis
+
+// 内容
+.content {
+  width: 80%;
+  margin: 0 auto;
+}
+
+// 文字省略号
+.ellipsis {
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}

@@ -1,0 +1,15 @@
+// 统一scss之混合宏@mixin 推荐使用
+// 如果你的代码块中涉及到变量，建议使用混合宏来创建相同的代码块。
+// 特点：可传参。
+// 不足：如果在样式文件中调用同一个混合宏，会产生多个对应的样式代码，造成代码的冗余。
+// 用法：声明混合 @mixin position-center($width, $height){...}
+// 用法：引入混合 @include position-center(600px, 300px);
+
+@mixin position-center($width:100px, $height: 20px){ /* 传多个参数 */
+  width: $width;
+  height: $height;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: (-($height)/2) 0 0 (-($width)/2);    
+}

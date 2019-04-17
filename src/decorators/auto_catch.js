@@ -1,5 +1,5 @@
 import _debug from "debug";
-const debug = _debug("app:AutoCatch");
+const debug = _debug("app:decorators:autoCatch");
 
 const defaultCatchType = "log";
 

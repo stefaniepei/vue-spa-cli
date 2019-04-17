@@ -1,0 +1,24 @@
+// 统一scss之占坑符%placeholder
+// 占坑和继承基本类似，唯一不同的是，相同的生成CSS块并没有在类中存在，而是额外声明。
+// 如果不调用已声明的占位符，将不会产生任何CSS。
+// 如果在不同选择器调用占位符，那么编译出来CSS将会把相同的代码合并在一起。
+// 不足：就是不能传参啦！个人觉得%placeholder优于@extend。
+
+// demo
+// %mt15 {
+//   margin-top: 15px;
+// }
+// %pt15{
+//   padding-top: 15px;
+// }
+
+// .aaa {
+//   @extend %mt15;
+//   @extend %pt15;
+// }
+// .bbb {  
+//   @extend %mt15;
+//   @extend %pt15;
+// }
+// 最终生成 .aaa, .bbb { margin-top: 15px; }
+// 最终生成 .aaa, .bbb { padding-top: 15px; }

@@ -1,7 +1,7 @@
 import _debug from "debug";
 import * as zlib from "zlib";
 // import cookies from 'js-cookie';// 如需使用cookie安装此类库
-const debug = _debug("app:StorageService");
+const debug = _debug("app:service:storageService");
 
 const StorageService = {
   // getCookie(key) {

@@ -2,7 +2,7 @@ const prefix = "DEPRECATION ";
 const MESSAGE = "This function will be removed.";
 
 import _debug from "debug";
-const debug = _debug("app:Decorators:Deprecated");
+const debug = _debug("app:decorators:deprecated");
 
 // 声明一个函数将被废弃
 export default (message = MESSAGE) => (target, name, descriptor) => {

@@ -1,31 +1,19 @@
 import * as ActionTypes from "./type";
+import { CommonMutations, CommonActions } from "../common";
 import { Api } from "./api";
-import { SUCCESS_CODE, SET_STATE } from "configs/constants";
+import { SUCCESS_CODE } from "@/configs/constants";
 
 export default {
   state: {
+    // 由于使用多窗口共享，请保证state唯一
     test: "",
     test2: ""
   },
   mutations: {
-    setState(state, obj) {
-      state[obj.key] = obj.val;
-    },
-    toggle(state, key) {
-      state[key] = !state[key];
-    },
-    setObjectState(state, obj) {
-      if (!state[obj.key]) return;
-      state[obj.key] = Object.assign(state[obj.key], obj.val);
-    }
+    ...CommonMutations
   },
   actions: {
-    [SET_STATE]({ commit }, params) {
-      commit("setState", {
-        key: params.key,
-        val: params.val
-      });
-    },
+    ...CommonActions,
     async [ActionTypes.SEND_TEST]({ commit }, params) {
       let res = await Api.sendTest(params);
       if (res && res.code === SUCCESS_CODE) {

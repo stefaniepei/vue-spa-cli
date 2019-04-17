@@ -12,6 +12,8 @@ vue 脚手架 by vue-cli3
 - :stores：vuex状态管理-状态类型,状态管理,接口请求
 - :utils：工具-数组处理工具,日期处理工具,数字处理工具,对象处理工具,字符串处理工具,检查/验证工具(不够可再加lodash/ramda)
 - :views：页面-vue页面+js页面+常量
+- :pc：pc端页面+js页面+常量
+- :mobile：h5端页面+js页面+常量
 
 ## components/views 目录说明
 - 各个模块组件/页面统一存放在 各自的 文件夹目录下
@@ -43,10 +45,12 @@ npm run buld
 ```
 
 ### 文档
-vue文档 https://cn.vuejs.org/v2/guide/
-vuex文档 https://vuex.vuejs.org/zh/guide/
-vue-router文档 https://router.vuejs.org/zh/
-vue-cli3文档 https://cli.vuejs.org/zh/guide
+- vue文档 https://cn.vuejs.org/v2/guide/
+- vuex文档 https://vuex.vuejs.org/zh/guide/
+- vue-router文档 https://router.vuejs.org/zh/
+- element-ui文档 http://element-cn.eleme.io/#/zh-CN/component/quickstart
+- scss文档 https://www.sass.hk/docs/      https://www.sass.hk/guide/
+- vue-cli3文档 https://cli.vuejs.org/zh/guide
 
 #### 其他
 /* eslint-disable */
