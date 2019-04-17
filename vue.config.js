@@ -4,12 +4,14 @@ function resolve (dir) {
   return path.join(__dirname, dir)
 }
 module.exports = {
+  outputDir: 'dist_web',
+  // 使用多页面会导致窗口起不来
   devServer: {
     overlay: {
-      warnings: true,
+      warnings: false,
       errors: true
     },
-    https: true,
+    // https: true,
     port: 8080,
     hot: true
   },
@@ -24,7 +26,12 @@ module.exports = {
     config.plugin('define').tap(([options={}])=>[{
       ...options,
       VERSION: JSON.stringify('1.0.0'),
-      APPNAME: JSON.stringify('vue-spa-cli')
+      APPNAME: JSON.stringify('oa-front-pc')
     }])
+  },
+  pluginOptions: {
+    electronBuilder: {
+      outputDir: 'dist_window'
+    },
   }
 };

@@ -5,6 +5,12 @@
 </template>
 <script lang="js" src="./chatBubble.js"></script>
 <style lang="scss" scoped>
+.runx_chatBubble.window {
+  span {
+    font-size: 20px;
+    color: #666;
+  }
+}
 .runx_chatBubble.pc {
   span {
     font-size: 18px;
